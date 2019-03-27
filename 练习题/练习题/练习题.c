@@ -216,7 +216,7 @@ int main6() {
 
 
 //做题失败
-int main() {
+int main7() {
 	char buf[20];
 	while (gets(buf) != EOF) {
 		while (buf != '\0') {
@@ -234,4 +234,239 @@ int main() {
 	}
 	system("pause");
 	return 0;
+}
+
+
+//1.实现一个函数，打印乘法口诀表，口诀表的行数和列数自己指定，
+//输入9，输出9 * 9口诀表，输入12，输出12 * 12的乘法口诀表。
+
+
+void Print() {//打印乘法口诀表的函数
+	int num = 0;
+	scanf("%d", &num);
+	for (int i = 1; i <= num; ++i) {
+		for (int j = 1; j <= i; ++j) {
+			printf("%d*%2d=%2d  ", j, i, i*j);
+		}
+		printf("\n");
+	}
+}
+void change(int*a ,int*b) {//交换两个数内容函数
+	int c = *a;
+	*a = *b;
+	*b = c;
+}
+int Isyear(int year) {//判断是不是闰年的函数
+	if (((year % 4 == 0) && year % 100 != 0) || year % 400 == 0) {
+		return 1;
+	}
+	return 0;
+}
+int main8() {
+	int num = 0;
+	scanf("%d", &num);
+	int ret=Isyear(num);
+	if (ret == 1) {
+		printf("%d年是闰年\n", num);
+	}
+	else {
+		printf("%d年不是闰年\n", num);
+	}
+	system("pause");
+	return 0;
+}
+
+
+//4.
+//创建一个数组，
+//实现函数init（）初始化数组、
+//实现empty（）清空数组、
+//实现reverse（）函数完成数组元素的逆置。
+//要求：自己设计函数的参数，返回值。
+
+void init(int arr[], int len) {
+	for (int i = 0; i < len; ++i) {
+		arr[i] = 4 * i + 1;
+	}
+}
+void empty(int arr[], int len) {
+	for (int i = 0; i < len; ++i) {
+		arr[i] = 0;
+	}
+}
+
+void reverse(int arr[], int len) {
+	int left = 0;
+	int right = len - 1;
+	while (left <= right) {
+		int tmp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = tmp;
+		++left;
+		--right;
+	}
+}
+void printarr(int arr[],int len) {
+	for (int i = 0; i < len; ++i) {
+		printf("arr[%d]=%d  ", i, arr[i]);
+	}
+	printf("\n");
+}
+int main9() {
+	int arrA[10] = { 0 };
+	init(arrA, 10);
+	printarr(arrA, 10);
+	reverse(arrA, 10);
+	printarr(arrA, 10);
+	empty(arrA, 10);
+	printarr(arrA, 10);
+	system("pause");
+	return 0;
+}
+
+
+void Isprime(int num) {
+	int i = 0;
+	for (i = 2; i < num; ++i) {
+		if (num%i == 0) {
+			printf("%d不是素数", num);
+			break;
+		}
+	}
+	if (i == num) {
+
+	printf("%d是素数", num);
+	}
+}
+int main10() {
+	Isprime(9);
+	system("pause");
+	return 0;
+}
+
+//2.编写一个函数实现n^k，使用递归实现
+
+int mypow(int n, int k) {
+	if (k == 1) {
+		return n;
+	}
+	return n*mypow(n, k-1);
+}
+int main11() {
+	int a = mypow(2, 4);
+	printf("%d\n", a);
+	system("pause");
+	return 0;
+}
+
+
+//3. 写一个递归函数DigitSum(n)，输入一个非负整数，返回组成它的数字之和，
+//例如，调用DigitSum(1729)，则应该返回1 + 7 + 2 + 9，它的和是19
+
+int DigitSum(int n) {
+	if (n < 10) {
+		return n;
+	}
+	return n % 10 + DigitSum(n / 10);
+}
+int main12() {
+	int ret = DigitSum(123456);
+	printf("%d", ret);
+	system("pause");
+	return 0;
+}
+
+
+//5.递归和非递归分别实现strlen
+
+int mystrlen(char* buf) {
+	int count = 0;
+	while (*buf != '\0') {
+		count++;
+		*buf++;
+	}
+	return count;
+}
+int main13() {
+	char buf[] = "welcome to bit";
+	int ret = mystrlen(buf);
+	printf("%d\n",ret);
+	system("pause");
+	return 0;
+}
+//递归的方法实现strlen
+int mystrlen2(char* buf) {
+	if (*buf == '\0') {
+		return 0;
+	}
+	return 1 + mystrlen2(buf + 1);
+}
+int main14() {
+	char buf[] = "welcome to bit";
+	int ret = mystrlen2(buf);
+	printf("%d\n", ret);
+	system("pause");
+	return 0;
+}
+
+//递归的方式实现n的阶乘
+int jiecheng(int n) {
+	if (n == 1) {
+		return 1;
+	}
+	return n*jiecheng(n - 1);
+}
+int main15() {
+	int ret = jiecheng(4);
+	printf("%d", ret);
+	system("pause");
+	return 0;
+}
+//非递归的方式实现n的阶乘
+int main16() {
+	int n = 4;
+	int tum = 1;
+	for (int i = 1; i <= n; ++i) {
+		tum = tum*i;
+	}
+	printf("%d", tum);
+	system("pause");
+	return 0;
+}
+
+void PRINT(int n) {
+	if (n == 0) {
+		return;
+	}
+	if (n < 10) {
+		printf("%d\n", n);
+	}
+	if (n>10) {
+	PRINT(n / 10);
+	printf("%d\n", n % 10);
+	}
+}
+int main17() {
+	PRINT(1729);
+	system("pause");
+	return 0;
+}
+
+int main() { 
+	int arr[]={-2,5,4,6,3,8}; 
+	int i=0; int j=0; 
+	int len=sizeof(arr)/sizeof(arr[0]); 
+	for(i=0;i<len-1;i++) { 
+		for(j=0;j<len-1-i;j++)  { 
+			if(arr[j]>arr[j+1]) { 
+			int tmp=arr[j]; 
+			arr[j]=arr[j+1]; 
+			arr[j+1]=tmp;
+			} 
+		}
+	} 
+	for(i=0;i<len;i++) { 
+		printf("%d",arr[i]);
+	} 
+	return 0; 
 }
