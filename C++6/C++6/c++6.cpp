@@ -127,7 +127,7 @@ istream& operator>>(istream&is, mystring&s) {
 	strcpy(s.str, tmp);
 	return is;
 }
-int main15() {
+int main() {
 	mystring s1("abc");
 	mystring s2(s1);
 	mystring s4("abcd");
