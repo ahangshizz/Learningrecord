@@ -4,6 +4,7 @@
 #include <math.h>
 #include <time.h>
 #include <stdlib.h>
+#if 0
 //1.在屏幕上输出以下图案：
 //*
 //***
@@ -470,3 +471,303 @@ int main() {
 	} 
 	return 0; 
 }
+#endif
+#if 0
+char IsBigletter(ch) {
+	return ch + 32;
+}
+char IsSmallletter(ch) {
+	return ch - 32;
+}
+int main() {
+	char ch = 0;
+	while (1) {
+		ch = getchar();
+		if (ch >= 'a'&&ch <= 'z') {
+			putchar(ch-32);
+		}
+		else if (ch>='A'&&ch <= 'Z') {
+			
+			putchar(ch+32);
+		}
+		else if (ch == '$') {
+			break;
+		}
+		else if (ch>'0'&&ch < '9') {
+			//do nothing
+		}
+		else {
+			putchar(ch);
+		}
+	}
+	system("pause");
+	return 0;
+}
+#endif
+#if 0
+//不使用(a+b)/2,求两个数的平均数
+
+int Average(int a, int b) {
+	if (a > b) {
+		return (b)+((a - b) / 2);
+	}
+	else
+	{
+		return (a + (b - a) / 2);
+	}
+
+}
+int main() {
+	int a = 10;
+	int b = 20;
+	int ret=Average(a, b);
+	printf("%d", ret);
+	return 0;
+}
+#endif
+#if 0
+//字符串的翻转
+//有一个字符数组的内容为:"student a am i",
+//	请你将数组的内容改为"i am a student".
+//	要求：
+//	不能使用库函数。
+//	只能开辟有限个空间（空间个数和字符串的长度无关）。
+//
+//	student a am i
+//	i ma a tneduts
+//	i am a student
+
+void Flip(char*array,int len) {
+	int left = 0;
+	int right = len;
+	while (left <= right) {
+		char tmp = array[left];
+		array[left] = array[right];
+		array[right] = tmp;
+		left++;
+		right--;
+	}
+}
+int main() {
+	char array[] = "tneduts a ma i";
+	int len = strlen(array)-1;
+	Flip(array, len);
+	for (int i = 0; i <= len; ++i) {
+		printf("%c", array[i]);
+	}
+	printf("\n");
+	system("pause");
+	return 0;
+}
+#endif
+#if 0
+//1.
+//5位运动员参加了10米台跳水比赛，有人让他们预测比赛结果
+//A选手说：B第二，我第三；
+//B选手说：我第二，E第四；
+//C选手说：我第一，D第二；
+//D选手说：C最后，我第三；
+//E选手说：我第四，A第一；
+//比赛结束后，每位选手都说对了一半，请编程确定比赛的名次。
+
+int main() {
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+	int e = 0;
+	for (a = 1; a <= 5; ++a) {
+		for (b = 1; b <= 5; ++b) {
+			for (c = 1; c <= 5; ++c) {
+				for (d = 1; d <= 5; ++d) {
+					for (e = 1; e <= 5; ++e) {
+						if (b == 2 || a == 3) {
+							if (b == 2 || e == 4) {
+								if (c == 1 || d == 2) {
+									if (c == 5 || d == 3) {
+										if (e == 4 || a == 1) {
+											if (a*b*c*d*e == 120) {
+												printf("%d %d %d %d %d\n", a, b, c, d, e);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
+#endif
+
+#if 0
+//打印杨辉三角
+int main() {
+	int array[100][100] = { 1 };//应该把初始值全部赋值为1,赋值为0没法计算
+	int i = 0;//i表示行数
+	int j = 0;//j表示第几个元素
+	int n = 0;
+	while (1) {
+		printf("请输入要打印的行数");
+		scanf("%d", &n);
+		if (n < 0 || n>100) {//判断用户输入的合法性
+			continue;
+		}
+		else {
+			for (i = 1; i <= n; ++i) {
+				for (j = 1; j <= i; ++j) {
+					array[i][j] = array[i - 1][j - 1] + array[i - 1][j];//当前二维数组元素等于上一行的两个元素相加
+					printf("%2d ", array[i][j]);
+				}
+				printf("\n");
+			}
+		}
+		return 0;
+	}
+	return 0;
+}
+#endif
+
+#if 0
+//日本某地发生了一件谋杀案，警察通过排查确定杀人凶手必为4个
+//嫌疑犯的一个。以下为4个嫌疑犯的供词。
+//A说：不是我。
+//B说：是C。
+//C说：是D。
+//D说：C在胡说
+//已知3个人说了真话，1个人说的是假话。
+//现在请根据这些信息，写一个程序来确定到底谁是凶手。
+int main() {
+	int killer;
+	for (killer = 'A'; killer <= 'D'; ++killer) {
+		if ((killer != 'A') + (killer == 'C') + (killer == 'D') + (killer != 'D') == 3) {
+			printf("%c\n", killer);
+		}
+	}
+	system("pause");
+	return 0;
+}
+#endif 
+#if 0
+//1.编写函数：
+//unsigned int reverse_bit(unsigned int value);
+//这个函数的返回值value的二进制位模式从左到右翻转后的值。
+//
+//如：
+//在32位机器上25这个值包含下列各位：
+//00000000000000000000000000011001
+//翻转后：（2550136832）
+//10011000000000000000000000000000
+//程序结果返回：
+//2550136832
+unsigned int reverse_bit(unsigned int value) {
+	int sum = 0;
+	for (int i = 0; i < 32; ++i) {
+		int ret = ((value >> i) & 1)*pow(2, 31 - i);
+		sum += ret;
+	}
+	printf("%u\n", sum);
+}
+int main() {
+	int value = 25;
+	reverse_bit(value);
+	return 0;
+}
+#endif	
+#if 0
+//3.编程实现：
+//一组数据中只有一个数字出现了一次。其他所有数字都是成对出现的。
+//请找出这个数字。（使用位运算）
+
+int main() {
+	int array[] = { 3,4,5,1,1,5,4 };
+	int len = sizeof(array) / sizeof(array[0]);
+	for (int i = 1; i < len; ++i) {
+		array[0] = array[0] ^ array[i];//异或没有搞明白
+	}
+	printf("%d\n", array[0]);
+	return 0;
+}
+#endif	
+#if 0
+//1.调整数组使奇数全部都位于偶数前面。
+//
+//题目：
+//
+//输入一个整数数组，实现一个函数，
+//来调整该数组中数字的顺序使得数组中所有的奇数位于数组的前半部分，
+//所有偶数位于数组的后半部分。
+int main() {
+	int buf[10] = { 0};//把数组全部初始化为0
+	int i = 0;
+	int len = 9;//数组的下标
+	for (i = 0; i < 10; ++i) {//循环输入数组
+		scanf("%d", &buf[i]);
+	}
+	for (i = 0; i <= len; ++i) {//循环条件是重点
+		if (buf[i] % 2 == 0) {
+			int tmp = buf[len];
+			buf[len] = buf[i];
+			buf[i] = tmp;//交换数组
+			len = len-1;//即控制循环跳出条件,又控制数组下边往前移动一.
+			i = i - 1;//因为不知道交换的元素是否为偶数,所以把这次循环再进行一次
+		}
+	}
+	for (i = 0; i < 10; ++i) {
+		printf("%d ", buf[i]);
+	}
+	return 0;
+}
+#endif 
+#if 0
+//杨氏矩阵
+//有一个二维数组.
+//数组的每行从左到右是递增的，每列从上到下是递增的.
+//在这样的数组中查找一个数字是否存在。
+//时间复杂度小于O(N);
+//数组：
+//1 2 3
+//2 3 4
+//3 4 5
+//
+//1 3 4
+//2 4 5
+//4 5 6
+//
+//1 2 3
+//4 5 6
+//7 8 9
+int mystr(int arr[][3], int row, int col,int key) {
+	int i = 0;
+	int j = col-1;
+	while (j>=0&&i<row) {
+		if (key == arr[i][j]) {
+			return 1;
+		}
+		else if (key > arr[i][j]) {
+			++i;//查找的元素大于这个值,在下一行查找
+		}
+		else {
+			--j;//如果小于这个数,则二维数组的列下标减一
+		}
+	}
+	return 0;
+}
+int main() {
+	int arr[][3] = { 1,2,3,
+					 2,3,4,
+					 3,4,5 };
+	int ret=mystr(arr, 3, 3, 4);
+	if (ret == 1) {
+		printf("找到了");
+	}
+	else if (ret == 0) {
+		printf("没有找到");
+	}
+	return 0;
+}
+#endif 
