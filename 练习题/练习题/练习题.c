@@ -771,3 +771,98 @@ int main() {
 	return 0;
 }
 #endif 
+
+#if 0
+//2.喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，
+//给20元，可以多少汽水。
+//编程实现。
+
+int main() {
+	int money = 20;//有20块钱
+	int count = 0;//记录喝汽水的个数
+	count = 20 / 1;
+	int tmp = 0;//空瓶个数
+	tmp = 20;
+	while(1) {
+		int num = tmp / 2;//空瓶换的汽水
+		count += num;//把空瓶换的汽水加到喝汽水个数上面
+		tmp = tmp/2+tmp%2;
+		if (tmp == 1) {//当最后只剩下一个空瓶时,退出循环
+			break;
+		}
+	}
+	printf("%d\n", count);
+	return 0;
+}
+//输出结果,20块钱可以喝39瓶汽水
+#endif
+#if 0
+//3.模拟实现strcpy
+
+void Mystrcpy(char best[], char src[]) {//把目标字符串和源字符串传进函数
+	if (src == NULL) {//如果源字符串为NULL直接程序结束
+		return -1;
+	}
+	//数组的形参会隐式转换成指针,解引用指针的到第一个字符进行赋值,
+	//在进行判定是否为反斜杠0,指针后置加加指向下一个元素
+	while ((*best++ = *src++) != '\0') {
+		//do nothing;
+	}
+	*best = '\0';//最后给指针最后一个元素赋值'\0';
+}
+int main() {
+	char buf[] = "welcome to xian";
+	char arr[64] = {0};
+	Mystrcpy(arr, buf);
+	printf("%s\n", arr);
+	return 0;
+}
+#endif
+#if 0
+char* Mystrcat(char buf[], char arr[]) {
+	char* ret = buf;//定义一个临时指针,存储buf的指针
+	while (*ret != '\0') {
+		ret++;//把指针指向buf的最后即'\0';
+	}
+	while ((*ret++ = *arr++) != '\0') {//从'\0'开始给buf进行后续拼接
+		;//do nothing
+	}
+	*ret = '\0';//最后给赋值'\0'
+	return (char*)ret;//返回这个定义的指针
+}
+int main() {
+	char buf[64] = "i am ";
+	char arr[] = "cat";
+	Mystrcat(buf, arr);
+	printf("%s\n", buf);
+	return 0;
+}
+//输出结果i am cat
+#endif
+#if 0
+//一个数组中只有两个数字是出现一次，
+//其他所有数字都出现了两次。
+//找出这两个数字，编程实现。
+
+int main() {
+	int arr[] = { 3,5,4,2,5,4,2,9 };
+	int i = 0;//第一次循环
+	int j = 0;//内层循环
+	int count=0;//计数
+	int len = sizeof(arr) / sizeof(int);
+	for (i = 0; i < len; ++i) {//用数组的一个元素与其他每个元素进行比较
+		for (j = 0; j < len; ++j) {
+			if (arr[i] == arr[j]) {
+			//如果两个数相等,count就自加,一个数出现一次那循环结束,
+			//count就是1,如果数字出现两次count出循环值为2
+				count++;
+			}
+		}
+		if (count == 1) {//判断count,如果为1则打印这个数
+			printf("%d ", arr[i]);
+		}
+		count = 0;//内层循环完毕一定要给count清零
+	}
+	return 0;
+}
+#endif
