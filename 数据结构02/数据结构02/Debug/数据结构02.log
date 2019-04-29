@@ -1,0 +1,6 @@
+﻿G:\VS2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(企业链表完成循环链表.vcxproj, 数据结构02.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  CircleLinkList.c
+  test.c
+  正在生成代码...
+c:\users\asus\desktop\-learning-record\数据结构02\数据结构02\test.c(25): warning C4715: “MyCompare”: 不是所有的控件路径都返回值
+  数据结构02.vcxproj -> C:\Users\asus\Desktop\-Learning-record\数据结构02\Debug\01企业链表完成循环链表.exe

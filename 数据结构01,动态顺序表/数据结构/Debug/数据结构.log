@@ -1,3 +1,0 @@
-﻿  Dam_array.c
-c:\users\asus\desktop\-learning-record\数据结构\数据结构\dam_array.c(128): warning C4477: “printf”: 格式字符串“%p”需要类型“void *”的参数，但可变参数 1 拥有了类型“int”
-  数据结构.vcxproj -> C:\Users\asus\Desktop\-Learning-record\数据结构\Debug\动态数组.exe

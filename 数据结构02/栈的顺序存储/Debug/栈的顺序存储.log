@@ -1,0 +1,10 @@
+﻿G:\VS2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(栈的顺序存储.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  pch.c
+c:\users\asus\desktop\-learning-record\数据结构02\栈的顺序存储\pch.c(30): warning C4033: “Top_SeqStack”必须返回值
+c:\users\asus\desktop\-learning-record\数据结构02\栈的顺序存储\pch.c(33): warning C4033: “Top_SeqStack”必须返回值
+c:\users\asus\desktop\-learning-record\数据结构02\栈的顺序存储\pch.c(55): warning C4098: “IsEmpty_SeqStack”:“void”函数返回值
+c:\users\asus\desktop\-learning-record\数据结构02\栈的顺序存储\pch.c(58): warning C4098: “IsEmpty_SeqStack”:“void”函数返回值
+c:\users\asus\desktop\-learning-record\数据结构02\栈的顺序存储\pch.c(61): warning C4098: “IsEmpty_SeqStack”:“void”函数返回值
+c:\users\asus\desktop\-learning-record\数据结构02\栈的顺序存储\pch.c(37): warning C4715: “Top_SeqStack”: 不是所有的控件路径都返回值
+  栈的顺序存储.c
+  栈的顺序存储.vcxproj -> C:\Users\asus\Desktop\-Learning-record\数据结构02\Debug\03栈的顺序存储.exe
