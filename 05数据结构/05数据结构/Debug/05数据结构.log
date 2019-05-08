@@ -1,0 +1,3 @@
+﻿G:\VS2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(05快速排序.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  01快速排序.c
+  05数据结构.vcxproj -> C:\Users\asus\Desktop\-Learning-record\05数据结构\Debug\01快速排序.exe
