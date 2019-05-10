@@ -1,4 +1,3 @@
-﻿  test.cpp
-  当函数模板遇上函数重载.cpp
-  正在生成代码...
-  C++类模板回顾.vcxproj -> C:\Users\asus\Desktop\-Learning-record\C++类模板回顾\Debug\C++类模板回顾.exe
+﻿  复数类综合运算符重载及类模板.cpp
+类模板中的static关键字.obj : error LNK2005: _main 已经在 复数类综合运算符重载及类模板.obj 中定义
+C:\Users\asus\Desktop\-Learning-record\C++类模板回顾\Debug\C++类模板回顾.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
