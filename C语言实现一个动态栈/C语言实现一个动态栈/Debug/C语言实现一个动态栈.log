@@ -1,0 +1,3 @@
+﻿  Stack.c
+Debug\Stack.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+  C语言实现一个动态栈.vcxproj -> C:\Users\asus\source\repos\C语言实现一个动态栈\Debug\C语言实现一个动态栈.exe
