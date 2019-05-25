@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
-
+#if 0
 //¿ìËÙÅÅĞò
 void QuickSort(int arr[], int start, int end) {
 	int i = start;
@@ -58,3 +59,49 @@ int main() {
 	system("pause");
 	return 0;
 }
+#endif
+
+#if 0
+void Print_arr(int arr[], int len) {
+	for (int i = 0; i < len; ++i) {
+		printf("%d ,", arr[i]);
+	}
+	printf("\n");
+}
+void insertsort(int arr[], int size) {
+	int j;
+	for (int i = 1; i < size; ++i) {
+		if (arr[i] < arr[i - 1]) {
+			int temp = arr[i];
+		for (j = i - 1; j >= 0 && arr[j] > temp; --j) {
+			arr[j + 1] = arr[j];
+		}
+		arr[j + 1] = temp;
+		}
+	}
+}
+void Bubblesort(int arr[], int size) {
+	for (int i = 0; i < size - 1; ++i) {
+		for (int j = 0; j < size - i - 1; ++j) {
+			if (arr[j] > arr[j + 1]) {
+				int temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+}
+int main() {
+	int arr[5];
+	srand((unsigned)time(NULL));
+	for (int i = 0; i < 5; ++i) {
+		arr[i] = rand() % 10;
+	}
+	Print_arr(arr, 5);
+/*	insertsort(arr, 5);*/
+	Bubblesort(arr, 5);
+	Print_arr(arr, 5);
+	system("pause");
+	return 0;
+}
+#endif
