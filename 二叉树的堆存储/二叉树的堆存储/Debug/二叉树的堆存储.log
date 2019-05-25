@@ -1,0 +1,5 @@
+﻿  heap.c
+c:\users\asus\desktop\-learning-record\二叉树的堆存储\二叉树的堆存储\heap.c(108): warning C4047: “函数”:“HPDataType *”与“HPDataType”的间接级别不同
+c:\users\asus\desktop\-learning-record\二叉树的堆存储\二叉树的堆存储\heap.c(108): warning C4024: “Swap”: 形参和实参 1 的类型不同
+c:\users\asus\desktop\-learning-record\二叉树的堆存储\二叉树的堆存储\heap.c(108): warning C4024: “Swap”: 形参和实参 2 的类型不同
+  二叉树的堆存储.vcxproj -> C:\Users\asus\Desktop\-Learning-record\二叉树的堆存储\Debug\二叉树的堆存储.exe
