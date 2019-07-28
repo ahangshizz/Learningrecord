@@ -54,7 +54,7 @@ int main() {
 			}
 		}
 		int count = 0;
-		for (int i = 0; i < len1; ++i) {
+		for (int i = 0; i < s1.size(); ++i) {
 			int num1 = s1[i]-48;
 			int num2 = s2[i]-48;
 			int sum = num1 + num2 + count;
