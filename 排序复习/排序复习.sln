@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "排序复习", "排序复习\排序复习.vcxproj", "{A59283DD-2C2B-4CFB-9057-2835657DA4B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Debug|x64.ActiveCfg = Debug|x64
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Debug|x64.Build.0 = Debug|x64
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Debug|x86.ActiveCfg = Debug|Win32
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Debug|x86.Build.0 = Debug|Win32
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Release|x64.ActiveCfg = Release|x64
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Release|x64.Build.0 = Release|x64
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Release|x86.ActiveCfg = Release|Win32
+		{A59283DD-2C2B-4CFB-9057-2835657DA4B7}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB127D36-2364-499E-8FB1-942A22869C64}
+	EndGlobalSection
+EndGlobal
