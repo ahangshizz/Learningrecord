@@ -99,9 +99,9 @@ int main() {
 		cout << arr[i] << " ";
 	cout << endl;
 	//Quick_Sort(arr, 0, 9);
-	//Shell_Sort(arr, 10);
+	Shell_Sort(arr, 10);
 	//Merge_Sort(arr, 0, 9, tmp);
-	Heap_Sort(arr, 9);
+	//Heap_Sort(arr, 9);
 	for (int i = 0; i < 10; ++i)
 		cout << arr[i] << " ";
 	cout << endl;
